@@ -18,6 +18,7 @@ contract Ownable {
     //  3) create an 'onlyOwner' modifier that throws if called by any account other than the owner.
     modifier onlyOwner(){
         require(msg.sender == _owner, 'Caller is not owner');
+        _;
 
     }
     //  4) fill out the transferOwnership function
@@ -53,9 +54,11 @@ contract Pausable is Ownable {
     //  4) create 'whenNotPaused' & 'paused' modifier that throws in the appropriate situation
     modifier whenNotPaused(){
         require(!_paused, 'Contract is paused');
+        _;
     }
     modifier paused(){
-        require(puased, 'Contract is not paused');
+        require(_paused, 'Contract is not paused');
+        _;
     }
     //  5) create a Paused & Unpaused event that emits the address that triggered the event
     event Paused(address caller);
@@ -231,11 +234,11 @@ contract ERC721 is Pausable, ERC165 {
     function _mint(address to, uint256 tokenId) internal {
 
         // TODO revert if given tokenId already exists or given address is invalid
-        require(!_exists(tokenID), 'given tokenId already exists');
+        require(!_exists(tokenId), 'given tokenId already exists');
         require(to != address(0), 'given address is invalid');
 
         // TODO mint tokenId to given address & increase token count of owner
-        _tokenOwner [tokenID] = to;
+        _tokenOwner [tokenId] = to;
         _ownedTokensCount[to].increment();
 
         // TODO emit Transfer event
@@ -255,7 +258,7 @@ contract ERC721 is Pausable, ERC165 {
         // TODO: update token counts & transfer ownership of the token ID
         _ownedTokensCount[from].decrement();
         _ownedTokensCount[to].increment();
-        _tokenOwner [tokenID] = to;
+        _tokenOwner [tokenId] = to;
         // TODO: emit correct event
         emit Transfer(from, to, tokenId);
     }
