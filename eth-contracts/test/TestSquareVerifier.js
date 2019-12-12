@@ -19,7 +19,7 @@ contract('TestSquareVerifier', accounts => {
         });
 
         it('verification with correct proof', async function () {
-            let result = await this.contract.verifyTx.call(proof.proof.A,
+            let result = await this.contract.verifyTx.call(
                 proof.proof.a,
                 proof.proof.b,
                 proof.proof.c,
@@ -33,7 +33,7 @@ contract('TestSquareVerifier', accounts => {
         // Test verification with incorrect proof
         it('Test verification with incorrect proof', async function () {
 
-            let result = await this.contract.verifyTx.call(proof.proof.A,
+            let result = await this.contract.verifyTx.call(
                 proof.proof.a,
                 proof.proof.b,
                 proof.proof.c,
