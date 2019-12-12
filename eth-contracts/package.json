@@ -1,0 +1,23 @@
+{
+  "name": "eth-contracts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "TestERC721Mintable": "truffle test test/TestERC721Mintable.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-yahya/blockchain-capstone"
+  },
+  "keywords": [
+    "udacity",
+    "blockchain",
+    "capstone"
+  ],
+  "author": "Muhammad Yahya",
+  "license": "ISC"
+}
