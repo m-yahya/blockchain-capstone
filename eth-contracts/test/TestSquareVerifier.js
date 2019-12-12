@@ -23,7 +23,7 @@ contract('TestSquareVerifier', accounts => {
                 proof.proof.a,
                 proof.proof.b,
                 proof.proof.c,
-                proof.input,
+                proof.inputs,
                 { from: account_one }
             );
 
@@ -32,16 +32,16 @@ contract('TestSquareVerifier', accounts => {
 
         // Test verification with incorrect proof
         it('Test verification with incorrect proof', async function () {
-
+            let inputs = [10, 2]
             let result = await this.contract.verifyTx.call(
                 proof.proof.a,
                 proof.proof.b,
                 proof.proof.c,
-                proof.input,
+                inputs,
                 { from: account_one }
             );
 
-            assert.equal(result, false, "Unexpected verification result");
+            assert.equal(result, false, "The proof is not correct");
         })
     })
 });
