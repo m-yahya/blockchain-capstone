@@ -2538,9 +2538,9 @@
           }
         ],
         "contractDependencies": [
-          129,
+          175,
           63,
-          175
+          129
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -9047,9 +9047,9 @@
           }
         ],
         "contractDependencies": [
-          129,
-          63,
           175,
+          63,
+          129,
           666
         ],
         "contractKind": "contract",
@@ -12720,10 +12720,10 @@
           }
         ],
         "contractDependencies": [
-          129,
+          175,
           63,
           964,
-          175,
+          129,
           666,
           7432
         ],
@@ -14099,11 +14099,11 @@
           }
         ],
         "contractDependencies": [
-          129,
+          175,
           63,
           964,
           1074,
-          175,
+          129,
           666,
           7432
         ],
@@ -16620,9 +16620,9 @@
           }
         ],
         "contractDependencies": [
-          129,
+          175,
           63,
-          175
+          129
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -23129,9 +23129,9 @@
           }
         ],
         "contractDependencies": [
-          129,
-          63,
           175,
+          63,
+          129,
           666
         ],
         "contractKind": "contract",
@@ -26802,10 +26802,10 @@
           }
         ],
         "contractDependencies": [
-          129,
+          175,
           63,
           964,
-          175,
+          129,
           666,
           7432
         ],
@@ -28181,11 +28181,11 @@
           }
         ],
         "contractDependencies": [
-          129,
+          175,
           63,
           964,
           1074,
-          175,
+          129,
           666,
           7432
         ],
@@ -28534,7 +28534,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-12-12T09:22:04.349Z",
+  "updatedAt": "2019-12-13T10:29:47.933Z",
   "devdoc": {
     "methods": {
       "isApprovedForAll(address,address)": {
