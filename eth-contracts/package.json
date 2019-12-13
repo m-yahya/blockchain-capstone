@@ -20,5 +20,8 @@
     "capstone"
   ],
   "author": "Muhammad Yahya",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "truffle-hdwallet-provider": "^1.0.17"
+  }
 }
